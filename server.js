@@ -1,5 +1,12 @@
-var express = require('express');
-var app = express();
+var koa = require('koa');
+var router = require('koa-router');
+var app = koa();
+
+app.use(router(app));
+
+app.use(function*() {
+    this.body = 'Hello World';
+});
 
 var Firebase = require("firebase");
 var myFirebaseRef = new Firebase("https://blazing-torch-8037.firebaseio.com/");
@@ -18,11 +25,9 @@ myFirebaseRef.child("location/city").on("value", function(snapshot) {
     console.log(snapshot.val()); // Alerts "San Francisco"
 });
 
-Firebase.goOffline();
-
-app.get('/', function(req, res) {
-  res.type('text/plain');
-  res.send('i am a beautiful butterfly');
+app.get('/users/:id', function*(next) {
+//    var user =        yield User.findOne(this.params.id);
+    this.body = 'boris';
 });
 
-app.listen(process.env.PORT || 12345);
+app.listen(process.env.PORT || 3000);
