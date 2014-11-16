@@ -1,0 +1,13 @@
+{
+  "name": "leanmetrix.api",
+  "description": "Node REST API for LeanMetrix",
+  "private": "true",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/borisyankov/leanmetrix.api.git"
+  },
+  "dependencies": {
+    "express": "^4.10.2",
+    "firebase": "^2.0.3"
+  }
+}
