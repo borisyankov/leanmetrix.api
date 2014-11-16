@@ -1,17 +1,20 @@
 {
-  "name": "leanmetrix.api",
-  "description": "Node REST API for LeanMetrix",
-  "private": "true",
-  "scripts": {
-    "start": "node --harmony server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/borisyankov/leanmetrix.api.git"
-  },
-  "dependencies": {
-    "koa": "^0.13.0",
-    "firebase": "^2.0.3",
-    "koa-router": "~3.7.0"
-  }
+    "name": "leanmetrix.api",
+    "description": "Node REST API for LeanMetrix",
+    "private": "true",
+    "engines": {
+        "node": "0.11.x"
+    },
+    "scripts": {
+        "start": "node --harmony server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/borisyankov/leanmetrix.api.git"
+    },
+    "dependencies": {
+        "koa": "^0.13.0",
+        "firebase": "^2.0.3",
+        "koa-router": "~3.7.0"
+    }
 }
