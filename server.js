@@ -1,5 +1,6 @@
 var koa = require('koa');
 var router = require('koa-router');
+var body = require('koa-body')();
 var app = koa();
 
 app.use(router(app));
@@ -28,6 +29,11 @@ myFirebaseRef.child("location/city").on("value", function(snapshot) {
 app.get('/users/:id', function*(next) {
 //    var user =        yield User.findOne(this.params.id);
     this.body = 'boris';
+});
+
+app.post('/contact/', body, function *(next) {
+    this.body = JSON.stringify(this.request.body);
+    console.log(this.body);
 });
 
 app.listen(process.env.PORT || 3000);
