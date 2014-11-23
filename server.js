@@ -1,13 +1,11 @@
 var koa = require('koa');
 var router = require('koa-router');
+var cors = require('koa-cors');
 var body = require('koa-body')();
 var app = koa();
 
+app.use(cors({origin: '*'}));
 app.use(router(app));
-
-app.use(function*() {
-    this.body = 'Hello World';
-});
 
 var Firebase = require("firebase");
 var myFirebaseRef = new Firebase("https://blazing-torch-8037.firebaseio.com/");
@@ -33,7 +31,6 @@ app.get('/users/:id', function*(next) {
 
 app.post('/contact/', body, function *(next) {
     this.body = JSON.stringify(this.request.body);
-    console.log(this.body);
 });
 
 app.listen(process.env.PORT || 3000);
