@@ -1,0 +1,9 @@
+{
+  "name": "LeanMetrix API",
+  "livereload": {
+    "port": 35729
+  },
+  "sockets": {
+    "port": 8080
+  }
+}

@@ -13,14 +13,15 @@
     "url": "https://github.com/borisyankov/leanmetrix.api.git"
   },
   "dependencies": {
-    "koa": "^0.13.0",
+    "co-body": "~1.0.0",
     "firebase": "^2.0.3",
-    "koa-router": "~3.7.0",
+    "firebase-token-generator": "~2.0.0",
+    "koa": "^0.13.0",
     "koa-body": "~0.4.0",
     "koa-cors": "0.0.14",
-    "co-body": "~1.0.0",
-    "firebase-token-generator": "~2.0.0",
+    "koa-route": "^2.4.0",
     "mandrill-api": "~1.0.41",
+    "node-customerio": "0.0.2",
     "node-mandrill": "~1.0.1"
   }
 }
