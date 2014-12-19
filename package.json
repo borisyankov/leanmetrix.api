@@ -23,5 +23,9 @@
     "mandrill-api": "~1.0.41",
     "node-customerio": "0.0.2",
     "node-mandrill": "~1.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.0.1",
+    "supertest": "^0.15.0"
   }
 }
