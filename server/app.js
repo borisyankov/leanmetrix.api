@@ -1,13 +1,11 @@
 var koa = require('koa');
 var app = koa();
-
-/*
 var cors = require('koa-cors');
 
 app.use(cors({
     origin: '*'
 }));
-*/
+
 
 module.exports = function(ROOT) {
 

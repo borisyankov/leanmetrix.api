@@ -6,7 +6,8 @@
     "node": "0.11.x"
   },
   "scripts": {
-    "start": "node --harmony server.js"
+    "start": "node --harmony server.js",
+    "test": "node --harmony node_modules/gulp/bin/gulp.js test-once"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,12 @@
     "node-mandrill": "~1.0.1"
   },
   "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-nodemon": "^1.0.4",
+    "chai": "^1.10.0",
+    "co-supertest": "0.0.7",
+    "gulp-exit": "0.0.2",
+    "gulp-mocha-co": "^0.4.1-co.3",
     "mocha": "^2.0.1",
     "supertest": "^0.15.0"
   }
